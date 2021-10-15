@@ -1,0 +1,48 @@
+# SAHANA_PALESH added TCSH shortcuts
+# 14-10-2021
+
+# .tcshrc
+then
+
+# Source global definitions
+if (-f /etc/cshrc ):
+	. /etc/cshrc
+fi
+
+# User specific aliases and functions
+    
+#--------------------------------------------------------------------------------------------
+# Aliases used for regular commands
+#
+# Syntax: alias alias_name 'command'
+#
+# Note: User can use any name for 'alias_name' metioned above according to their convinence
+#--------------------------------------------------------------------------------------------
+
+#-------------------------------------------------------
+# Alias for listing files
+#-------------------------------------------------------
+  alias a 'ls -ls'
+  alias h 'ls -la'
+
+#-------------------------------------------------------
+# Alias used for Changing Directories
+#-------------------------------------------------------
+  alias z 'cd ~'
+  alias x 'cd ..'
+  alias c 'cd -'
+
+#-------------------------------------------------------
+# Alias for my specific working directories
+#-------------------------------------------------------
+  alias l 'cd /pdtools/work_area/frontend/sahana/'
+  alias p 'cd /pdtools/work_area/frontend/sahana/spi_avip-1/'
+  alias m 'cd saha'
+
+#-------------------------------------------------------
+# Alias for tcsh
+#-------------------------------------------------------
+  alias b 'bash'
+  alias s 'source /home/share/questa.csh'
+
+

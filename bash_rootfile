@@ -1,0 +1,82 @@
+# SAHANA_PALESH ADDED SHORCUTS TO BASH SHELL
+# 14-10-2021
+
+# .bashrc
+
+# Source global definitions
+if [ -f /etc/bashrc ]; then
+	. /etc/bashrc
+fi
+
+# User specific aliases and functions
+
+#--------------------------------------------------------------------------------------------
+# Aliases used for regular commands
+#
+# Syntax: alias alias_name="command"
+#
+# Note: User can use any name for 'alias_name' metioned above according to their convinence
+#--------------------------------------------------------------------------------------------
+
+#-------------------------------------------------------
+# Alias for listing files
+#-------------------------------------------------------
+  alias a="ls -ls"
+  alias h="ls -la"
+
+#-------------------------------------------------------
+# Alias used for Changing Directories
+#-------------------------------------------------------
+  alias z="cd ~" 
+  alias x="cd .."
+  alias c="cd -"
+
+#-------------------------------------------------------
+# Alias for my specific working directories
+#-------------------------------------------------------
+  alias p="cd /pdtools/work_area/frontend/sahana/spi_avip-1"
+  alias o="cd /pdtools/work_area/frontend/sahana/spi_avip"
+  alias l="cd /pdtools/work_area/frontend/sahana/"
+  alias m="cd saha"
+  alias t="tcsh"
+
+
+  
+  
+#--------------------------------------------------------------------------------------------
+# Functions used for regular commands
+#
+# Syntax: function_name() {
+#           commands          
+#         }
+#
+# Note: User can use multiple commands in a single line according to their convinence
+#--------------------------------------------------------------------------------------------
+
+#-------------------------------------------------------
+# Function for git commands
+#-------------------------------------------------------
+  gf() {
+    git add -A && 
+    git status
+    git commit -m "$1" && 
+    git status
+    git branch &&
+    git push origin "main" &&
+    git status
+  }
+
+#-------------------------------------------------------
+# Function to remove Git file/directory
+#-------------------------------------------------------
+  gr() {
+    git rm -rf "$1"
+  }
+
+#-------------------------------------------------------
+# Function to clone
+#-------------------------------------------------------
+  gc() {
+    git clone git@github.com:sahanapalesh/"$1".git
+  }
+
