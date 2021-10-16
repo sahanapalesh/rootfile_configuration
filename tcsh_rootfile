@@ -36,13 +36,15 @@ fi
 # Alias for my specific working directories
 #-------------------------------------------------------
   alias l 'cd /pdtools/work_area/frontend/sahana/'
-  alias p 'cd /pdtools/work_area/frontend/sahana/spi_avip-1/'
-  alias m 'cd saha'
+  alias b 'cd /pdtools/work_area/frontend/sahana/backup_folders/'
+
+  alias m 'cd /pdtools/work_area/frontend/sahana/spi_avip-muneeb/'
+  alias n 'cd /pdtools/work_area/frontend/sahana/spi_avip-shweta/'
 
 #-------------------------------------------------------
 # Alias for tcsh
 #-------------------------------------------------------
   alias b 'bash'
+  alias st 'source ~/.tcshrc'
   alias s 'source /home/share/questa.csh'
-
 

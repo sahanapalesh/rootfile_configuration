@@ -34,14 +34,18 @@ fi
 #-------------------------------------------------------
 # Alias for my specific working directories
 #-------------------------------------------------------
-  alias p="cd /pdtools/work_area/frontend/sahana/spi_avip-1"
-  alias o="cd /pdtools/work_area/frontend/sahana/spi_avip"
   alias l="cd /pdtools/work_area/frontend/sahana/"
-  alias m="cd saha"
-  alias t="tcsh"
-
-
+  alias b="cd /pdtools/work_area/frontend/sahana/backup_folders/"
   
+  alias m="cd /pdtools/work_area/frontend/sahana/spi_avip-muneeb/"
+  alias n="cd /pdtools/work_area/frontend/sahana/spi_avip-shweta/"
+  
+#-------------------------------------------------------
+# Alias for bash terminal
+#-------------------------------------------------------
+  alias t="tcsh"
+  alias sb="source ~/.bashrc"
+
   
 #--------------------------------------------------------------------------------------------
 # Functions used for regular commands
@@ -54,7 +58,7 @@ fi
 #--------------------------------------------------------------------------------------------
 
 #-------------------------------------------------------
-# Function for git commands
+# Function for git add, commit and push
 #-------------------------------------------------------
   gf() {
     git add -A && 
@@ -62,7 +66,7 @@ fi
     git commit -m "$1" && 
     git status
     git branch &&
-    git push origin "main" &&
+    git push origin main &&
     git status
   }
 
@@ -74,9 +78,23 @@ fi
   }
 
 #-------------------------------------------------------
-# Function to clone
+# Function to git clone
 #-------------------------------------------------------
   gc() {
     git clone git@github.com:sahanapalesh/"$1".git
+  }
+
+#-------------------------------------------------------
+# Function to git pull
+#-------------------------------------------------------
+  gp() {
+    git pull git@github.com:sahanapalesh/"$1".git
+  }
+
+#-------------------------------------------------------
+# Function to git checkout
+#-------------------------------------------------------
+  gch() {
+    git checkout -b "$1"
   }
 
